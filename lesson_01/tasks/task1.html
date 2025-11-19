@@ -2,14 +2,19 @@
 <html lang="uk">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Задача 1</title>
+	<!-- Підключаємо React -->
+	<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+	<!-- Підключаємо ReactDOM -->
+	<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+	<!-- Babel для підтримки JSX -->
+	<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue:regular" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,regular,700" rel="stylesheet">
 	<link rel="stylesheet" href="../../css/style.css">
-	<title>Задача 1</title>
 </head>
-
 
 <body>
 	<div class="wrapper">
@@ -26,36 +31,9 @@
 					<h1>Задача 1</h1>
 					<div class="task">
 
-						<h2>
-							Знайти суму, добуток та частку двох дійсних чисел. Результат вивести у формі таблиці
-						</h2>
-						<script>
-							let a = parseFloat(prompt('Введіть значення a ', '1'))
-							let b = parseFloat(prompt('Введіть значення b ', '1'))
-							//2. Обчислюємо результат
-							let sum = a + b
-							let product = a * b
-							let division = a / b
-							//3. Виводимо результат
-							document.write(`
-							<h2 class="title-solution">Рішення:</h2>
-<table  >
-  <tr>
-    <th>Сума</th>
-    <td>${sum}</td>
-  </tr>
-  <tr>
-    <th>Добуток</th>
-    <td>${product}</td>
-  </tr>
-  <tr>
-    <th>Частка</th>
-    <td>${division.toFixed(2)}</td>
-  </tr>
-</table>
 
-`)
-						</script>
+
+						<div id="root"></div>
 
 					</div>
 				</div>
@@ -66,6 +44,46 @@
 			</div>
 		</footer>
 	</div>
+
+
+	<script type="text/babel">
+
+
+		function Passengers() {
+			const [passengersCount, setPassengersCount] = React.useState(0)
+			const busCount = Math.ceil(passengersCount / 20)
+			const bottleWaterCount = passengersCount * 2
+			const sandwichCount = passengersCount * 3
+			return (
+				<div>
+					<div>
+						<label>
+							Кількість пасажирів
+							<input
+								type="number"
+								value={passengersCount}
+								onChange={(e) => setPassengersCount(Number(e.target.value))}
+								className="field__input"
+							/>
+						</label>
+					</div>
+
+					<hr />
+					<div>Кількість автобусів: {busCount}</div>
+					<div>Кількість пляшок води : {bottleWaterCount}</div>
+					<div>Кількість бутербродів: {sandwichCount}</div>
+				</div>
+			)
+		}
+
+		function App() {
+			return <Passengers />
+		}
+
+		const root = ReactDOM.createRoot(document.getElementById('root'))
+
+		root.render(React.createElement(App))
+	</script>
 </body>
 
 </html>

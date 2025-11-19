@@ -2,14 +2,19 @@
 <html lang="uk">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Задача 2</title>
+	<!-- Підключаємо React -->
+	<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+	<!-- Підключаємо ReactDOM -->
+	<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+	<!-- Babel для підтримки JSX -->
+	<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue:regular" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,regular,700" rel="stylesheet">
 	<link rel="stylesheet" href="../../css/style.css">
-	<title>Задача 2</title>
 </head>
-
 
 <body>
 	<div class="wrapper">
@@ -26,21 +31,9 @@
 					<h1>Задача 2</h1>
 					<div class="task">
 
-						<h2>
-							Дано рік народження (дата: 1 січня) та поточний рік. Знайти кількість років.
-						</h2>
 
-						<script>
-							let currentYear = 2025
-							let birthYear = parseInt(prompt('Введіть свій рік народження '))
-							//2. Обчислюємо результат
-							let age = currentYear - birthYear
-							//3. Виводимо результат
-							document.write(`
-						<h2 class="title-solution">Рішення:</h2>
-<p class="solution"><strong>Ваш вік</strong> = ${age}</p>
-`)
-						</script>
+
+						<div id="root"></div>
 
 					</div>
 				</div>
@@ -51,6 +44,78 @@
 			</div>
 		</footer>
 	</div>
+
+
+	<script type="text/babel">
+
+
+		function Seasons() {
+			function getSeason(month) {
+				let season
+				switch (month) {
+					case 12:
+					case 1:
+					case 2:
+						season = 0;
+						break;
+
+					case 3:
+					case 4:
+					case 5:
+						season = 1;
+						break;
+
+					case 6:
+					case 7:
+					case 8:
+						season = 2;
+						break;
+
+					case 9:
+					case 10:
+					case 11:
+						season = 3;
+						break;
+					default:
+						season = 0
+				}
+				return season
+			}
+			const [monthNumber, setMonthNumber] = React.useState(1)
+			const seasonName = ['Зима', 'Весна', 'Літо', 'Осінь']
+			const seasonCloth = ['Пальто', 'Кроссовки', 'Шорти', 'Дождевик']
+			const seasonImage = ['../../img/1/4.jpg', '../../img/1/1.webp', '../../img/1/2.jpg', '../../img/1/3.jpg']
+			const seasonNum = getSeason(monthNumber)
+			return (
+				<div>
+					<div>
+						<label>
+							Номер місяця
+							<input
+								type="number"
+								value={monthNumber}
+								onChange={(e) => setMonthNumber(Number(e.target.value))}
+								className="field__input"
+							/>
+						</label>
+					</div>
+
+					<hr />
+					<div>Сезон: {seasonName[seasonNum]}</div>
+					<div>Рекомендований одяг: {seasonCloth[seasonNum]}</div>
+					<div className='block-image'> <img src={seasonImage[seasonNum]} /></div>
+				</div>
+			)
+		}
+
+		function App() {
+			return <Seasons />
+		}
+
+		const root = ReactDOM.createRoot(document.getElementById('root'))
+
+		root.render(React.createElement(App))
+	</script>
 </body>
 
 </html>

@@ -11,7 +11,7 @@ body{
 		flex-grow: 1;
 		display: flex;
 	}
-	background-color: #f0858b;
+	background-color: #f0858b; 
 }
 [class*="__container"]{
 	max-width: 65.625rem;
@@ -236,10 +236,13 @@ table{
 }
 
 
-	.list--1{
+	.list--1{ 
 		margin-left:1.25rem;
 		li{
 			list-style: disc;
+			font-size: 1rem;
+    		color: rgb(85, 85, 85);
+    		line-height:150%;
 		}
 	}
 
@@ -312,6 +315,7 @@ margin-top:40px;
 			border-radius:5px;
 			padding-inline:10px;
 			color:#333;
+			margin-left:10px;
 		}
 }
 .result {
@@ -547,7 +551,12 @@ img{
 	}
 }
 
-
+.block-image{
+	margin-top:10px;
+	img{
+		width:300px;
+	}
+}
 
 
 

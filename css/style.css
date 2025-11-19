@@ -272,6 +272,9 @@ table tr td {
 }
 .list--1 li {
   list-style: disc;
+  font-size: 1rem;
+  color: rgb(85, 85, 85);
+  line-height: 150%;
 }
 
 hr {
@@ -340,6 +343,7 @@ div {
   border-radius: 5px;
   padding-inline: 10px;
   color: #333;
+  margin-left: 10px;
 }
 
 .result {
@@ -563,4 +567,11 @@ div {
   -o-object-fit: cover;
      object-fit: cover;
   display: block;
+}
+
+.block-image {
+  margin-top: 10px;
+}
+.block-image img {
+  width: 300px;
 }
