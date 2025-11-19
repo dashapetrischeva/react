@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue:regular" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,regular,700" rel="stylesheet">
+	<link rel="stylesheet" href="../../css/style.css">
+	<title>Задача 0</title>
+</head>
+
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<a href="../index.html" class="header__logo">
+					Dasha Petrischeva
+				</a>
+			</div>
+		</header>
+		<main class="page">
+			<div class="article">
+				<div class="article__container">
+					<h1>Задача 0</h1>
+					<div class="task">
+
+						<h2>
+							Обчислити значення виразів
+						</h2>
+						<img src="../../img/2_0.jpg" alt="Image">
+						<script>
+							let number = 12
+							let a = parseFloat(prompt('Введіть значення a ', '1'))
+							let b = parseFloat(prompt('Введіть значення b ', '1'))
+							let c = parseFloat(prompt('Введіть значення c ', '1'))
+							//2. Обчислюємо результат
+							let S1 = a + number + b
+							let S2 = Math.sqrt((a + b) / (2 * a))
+							let S3 = Math.cbrt((a + b) * c)
+							let S4 = Math.sin(a / (-b))
+
+
+							//3. Виводимо результат
+							document.write(`
+							<p class="input-data">a = ${a}, b = ${b}, c = ${c}</p>
+						<h2 class="title-solution">Рішення:</h2>
+<p class="solution">S1 = ${S1}</p>
+<p class="solution">S2 = ${S2.toFixed(2)}</p>
+<p class="solution">S3 = ${S3.toFixed(2)}</p>
+<p class="solution">S4 = ${S4.toFixed(2)}</p>
+`)
+						</script>
+					</div>
+
+
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				© 2025 Dasha Petrischeva
+			</div>
+		</footer>
+	</div>
+</body>
+
+</html>

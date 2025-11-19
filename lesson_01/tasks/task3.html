@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue:regular" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,regular,700" rel="stylesheet">
+	<link rel="stylesheet" href="../../css/style.css">
+	<title>Задача 3</title>
+</head>
+
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<a href="../index.html" class="header__logo">
+					Dasha Petrischeva
+				</a>
+			</div>
+		</header>
+		<main class="page">
+			<div class="article">
+				<div class="article__container">
+					<h1>Задача 3</h1>
+					<div class="task">
+
+						<h2>
+							Дано вартість одиниці товару і кількість. Знайти загальну вартість та ПДВ (5% від загальної
+							вартості).
+						</h2>
+
+						<script>
+
+
+
+							let percent = 5
+							let productPrice = parseFloat(prompt('Вартість одиниці товару', '100'))
+							let productQuantity = parseInt(prompt('Кількість товару', '1'))
+							//2. Обчислюємо результат
+							let totalPrice = productPrice * productQuantity
+							let vat = percent * totalPrice / 100
+							//3. Виводимо результат
+							document.write(`
+						<h2 class="title-solution">Рішення:</h2>
+<p class="solution"><strong>Загальна вартість</strong> = ${totalPrice}</p>
+<p class="solution"><strong>ПДВ</strong> = ${vat.toFixed(2)}</p>
+`)
+						</script>
+
+					</div>
+				</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				© 2025 Dasha Petrischeva
+			</div>
+		</footer>
+	</div>
+</body>
+
+</html>
