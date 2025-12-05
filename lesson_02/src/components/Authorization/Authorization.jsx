@@ -53,7 +53,7 @@ function Authorization() {
 
 			<div className={styles.result}>
 				{loginIsCorrect === true && (
-					<img src="../src/assets/smile.jpg" />
+					<img src="/smile.jpg" />
 				)}
 				{loginIsCorrect === false && (
 					<div className={classColor}>Доступ заборонено!</div>

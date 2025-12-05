@@ -25,7 +25,7 @@ function EnglishTrainer() {
 		<div>
 			<h2>Задача 3</h2>
 			<form action="#" method="GET" className={styles.form}>
-				<div className={classColor}><img src="../src/assets/table.jpg" alt="Image" /></div>
+				<div className={classColor}><img src="/table.jpg" alt="Image" /></div>
 				<div className={styles.title}>Table</div>
 				<div className={styles.form__field}>
 					<label className={styles.field__label}>
