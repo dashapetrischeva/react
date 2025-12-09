@@ -11,11 +11,11 @@ function AthletesList() {
 	])
 	const [selectedList, setSelectedList] = useState([])
 	function generalListClickHandler(el) {
-		setGeneralList(prev => prev.filter(item => item !== el));
+		setGeneralList(prev => prev.filter(item => item !== el))
 		setSelectedList(prev => [...prev, el])
 	}
 	function selectedListClickHandler(el) {
-		setSelectedList(prev => prev.filter(item => item !== el));
+		setSelectedList(prev => prev.filter(item => item !== el))
 		setGeneralList(prev => [...prev, el])
 	}
 
@@ -41,7 +41,7 @@ function AthletesList() {
 				</div>
 			</div>
 		</section>
-	);
+	)
 }
 
 export default AthletesList;

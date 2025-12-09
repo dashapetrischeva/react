@@ -1,14 +1,14 @@
 import { useState, useRef } from "react";
 import styles from './Temperature.module.css'
 function Temperature() {
-	const [temperature, setTemperature] = useState('');
-	const numericTemp = Number(temperature);
+	const [temperature, setTemperature] = useState('')
+	const numericTemp = Number(temperature)
 	let bgColor
 	if (temperature !== '') {
-		if (numericTemp < 0) bgColor = styles.white;
-		else if (numericTemp <= 10) bgColor = styles.blue;
-		else if (numericTemp <= 22) bgColor = styles.green;
-		else bgColor = styles.red;
+		if (numericTemp < 0) bgColor = styles.white
+		else if (numericTemp <= 10) bgColor = styles.blue
+		else if (numericTemp <= 22) bgColor = styles.green
+		else bgColor = styles.red
 	}
 	return (
 		<section className={bgColor}>
@@ -20,12 +20,8 @@ function Temperature() {
 
 			</div>
 		</section>
-	);
+	)
 }
 
 export default Temperature;
 
-// менше нуля – білий
-// від 0 до 10 – синій,
-// від 11 до 22 – зелений
-// вище 22 – червоний
