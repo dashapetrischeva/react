@@ -3,12 +3,12 @@ import Player from './Player';
 import RandomNumber from './RandomNumber';
 import styles from './GuessNumber.module.css'
 function GuessNumber() {
+	const [gameOver, setGameOver] = useState(false);
 	const MIN = 1
 	const MAX = 9
 	const [randomNumbers, setRandomNumbers] = useState(() =>
 		Array.from({ length: 3 }, () => Math.floor(Math.random() * (MAX - MIN + 1)) + MIN)
 	)
-	console.log(randomNumbers)
 	const [currentPlayer, setCurrentPlayer] = useState(1)
 	const [usedNumbers, setUsedNumbers] = useState([])
 	const [player1GuessedNumbers, setPlayer1GuessedNumbers] = useState([])
@@ -18,6 +18,7 @@ function GuessNumber() {
 
 
 	function handleGuess(number) {
+		if (gameOver) return;
 		number = Number(number);
 
 
@@ -43,6 +44,7 @@ function GuessNumber() {
 					} else {
 						alert("Player 2 guessed the last number, so he lost!");
 					}
+					setGameOver(true);
 				}
 				return newGuessed;
 			});
@@ -60,8 +62,8 @@ function GuessNumber() {
 				<h1>Guess the number</h1>
 				<RandomNumber guessed={guessed} />
 				<div className={styles.players__container}>
-					<Player playerId={1} currentPlayer={currentPlayer} handleGuess={handleGuess} guessedNumbers={player1GuessedNumbers} usedNumbers={usedNumbers} />
-					<Player playerId={2} currentPlayer={currentPlayer} handleGuess={handleGuess} guessedNumbers={player2GuessedNumbers} usedNumbers={usedNumbers} />
+					<Player playerId={1} currentPlayer={currentPlayer} handleGuess={handleGuess} guessedNumbers={player1GuessedNumbers} usedNumbers={usedNumbers} gameOver={gameOver} />
+					<Player playerId={2} currentPlayer={currentPlayer} handleGuess={handleGuess} guessedNumbers={player2GuessedNumbers} usedNumbers={usedNumbers} gameOver={gameOver} />
 
 
 

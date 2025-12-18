@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import styles from './Player.module.css';
 
-function Player({ playerId, currentPlayer, handleGuess, guessedNumbers, usedNumbers }) {
+function Player({ playerId, currentPlayer, handleGuess, guessedNumbers, usedNumbers, gameOver }) {
 	const [userNumber, setUserNumber] = useState('')
 	const isMyTurn = currentPlayer === playerId;
 	const isUsed = usedNumbers.includes(Number(userNumber));
@@ -35,12 +35,12 @@ function Player({ playerId, currentPlayer, handleGuess, guessedNumbers, usedNumb
 						value={userNumber}
 						placeholder='Type a number'
 						onChange={(e) => setUserNumber(e.target.value)}
-						disabled={!isMyTurn}
+						disabled={!isMyTurn || gameOver}
 					/>
 
 				</div>
 				<div className={styles.form__buttons}>
-					<button type="button" onClick={onClickHandler} disabled={!isMyTurn || isUsed}>Make a move</button>
+					<button type="button" onClick={onClickHandler} disabled={!isMyTurn || gameOver || isUsed}>Make a move</button>
 				</div>
 				<div className={styles.guessedNumbers}>
 					Guessed numbers: <span> {guessedNumbers.length === 0 ? "none" : guessedNumbers.join(", ")}</span>
