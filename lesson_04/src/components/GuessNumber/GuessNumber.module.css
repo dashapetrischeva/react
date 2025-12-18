@@ -1,0 +1,10 @@
+.players__container{
+	display:flex;
+	gap:10px;
+	 }
+
+	 .guessNumber__container{
+		 background-color: #e8d1d1;
+	 border-radius: 0.625rem;
+	 padding:20px;
+	 }
