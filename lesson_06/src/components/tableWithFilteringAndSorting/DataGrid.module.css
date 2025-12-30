@@ -1,0 +1,47 @@
+.formField {
+  margin-bottom: 20px;
+  display:flex;
+  gap:10px;
+}
+.fieldInput {
+flex-grow:1;
+  line-height: 150%;
+  outline: 1px solid #f0858b;
+  border:none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-inline: 10px;
+  color: #333;
+}
+li {
+	list-style: none;
+}
+ul{
+		padding: 0;
+	margin: 0;
+}
+.list{
+	display:flex;
+	gap:16px;
+   flex-direction: column;
+	margin-top:40px;
+	width:100%;
+
+}
+.button{
+	margin:0;
+	padding:0;
+	background:none;
+	img{
+		width:30px;
+	height:30px;
+	}
+}
+.button:hover{
+	border:none;
+	outline:none;
+}
+.button:selected{
+	border:none;
+	outline:none;
+}

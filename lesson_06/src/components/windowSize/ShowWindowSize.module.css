@@ -1,0 +1,7 @@
+.showWindowSize{
+	margin-top:40px;
+	.windowSize{
+		font-size:20px;
+		font-weight:700;
+	}
+}

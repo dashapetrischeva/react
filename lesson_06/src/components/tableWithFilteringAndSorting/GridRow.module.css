@@ -1,0 +1,22 @@
+.item {
+    background: linear-gradient(135deg, var(--card), rgba(255, 255, 255, .7));
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    padding: 18px;
+    box-shadow: 0 4px 12px #20212414;
+    transition: all .2s ease;
+    cursor: pointer;
+	display:flex;
+	 justify-content: space-between;
+	 gap:16px;
+	 padding:20px 30px;
+	 align-items:center;
+	 img{
+		width:50px;
+	 }
+	
+}
+.itemName{
+	flex-grow:1;
+	text-align:left;
+}
