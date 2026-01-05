@@ -1,0 +1,13 @@
+.productsList{
+		display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px; 
+  margin-bottom:30px;
+}
+.home{
+color:#f0858b;
+
+}
+.home:hover{
+	color:#db020d;
+}

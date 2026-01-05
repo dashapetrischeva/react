@@ -1,0 +1,7 @@
+.page{
+	background-color: #fff;
+    color: #4b3f3f;
+    border-radius: 0.625rem;
+    padding: 3.125rem;
+	flex-grow: 1;
+}
