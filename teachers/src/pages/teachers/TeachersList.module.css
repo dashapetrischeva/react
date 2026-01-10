@@ -1,8 +1,30 @@
 .buttons{
 display:flex;
 gap:16px;
-margin-top:20px;
+}
+
+.addButton{
+	line-height: 2.5rem;
+    background-color: #01a923;
+    color: #fff;
+    width: auto;
+    padding-inline: 25px;
+    border-radius: 5px;
+    box-shadow: 0.3125rem 0.3125rem 0.9375rem rgba(0, 0, 0, 0.15);
+margin:0;
+    cursor: pointer;
+    align-self: flex-start;
 }
 .meetingButton{
 background-color:#0000ff;
+margin:0;
+}
+.loading{
+	color:#333;
+}
+.error{
+	color:red;
+}
+h1{
+	margin-bottom:20px;
 }
