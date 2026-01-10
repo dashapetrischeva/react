@@ -6,7 +6,7 @@ import styles from './GoHomeButton.module.css'
 function GoHomeButton() {
 	const navigate = useNavigate()
 	return (
-		<button onClick={() => navigate(frontRoutes.navigate.home)}>Go home</button>
+		<button onClick={() => navigate(frontRoutes.navigate.home)} className={styles.button}>Go home</button>
 	);
 }
 
