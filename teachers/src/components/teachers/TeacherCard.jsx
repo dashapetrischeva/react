@@ -15,7 +15,7 @@ function TeacherCard({ teacher, onSelect, isSelected, deleteTeacher, isMeeting }
 				</div>
 				<div className={styles.section2}>
 					{
-						onSelect ? <button onClick={() => onSelect(teacher.id)}>
+						onSelect ? <button onClick={() => onSelect(teacher.id)} className={styles.select}>
 							{isSelected ? 'Selected' : 'Select'}
 						</button> : null
 					}

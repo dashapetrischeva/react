@@ -79,6 +79,13 @@ width:100%;
   align-self: stretch;
   width:50%;
   margin-top:20px;
+  line-height: 2.5rem;
+    color: #fff;
+    padding-inline: 25px;
+    border-radius: 5px;
+    box-shadow: 0.3125rem 0.3125rem 0.9375rem rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    align-self: flex-start;
 }
 .edit{
   display:block;
@@ -93,4 +100,16 @@ width:100%;
     cursor: pointer;
     align-self: stretch;
     text-align: center;
+}
+.select{
+  line-height: 2.5rem;
+    background-color: #01a923;
+    color: #fff;
+    width: auto;
+    padding-inline: 25px;
+    border-radius: 5px;
+    box-shadow: 0.3125rem 0.3125rem 0.9375rem rgba(0, 0, 0, 0.15);
+    margin:0;
+    cursor: pointer;
+    align-self: flex-start;
 }
