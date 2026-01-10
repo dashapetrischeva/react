@@ -16,6 +16,14 @@ margin:0;
     align-self: flex-start;
 }
 .meetingButton{
+	line-height: 2.5rem;
+    color: #fff;
+    width: auto;
+    padding-inline: 25px;
+    border-radius: 5px;
+    box-shadow: 0.3125rem 0.3125rem 0.9375rem rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    align-self: flex-start;
 background-color:#0000ff;
 margin:0;
 }
