@@ -1,7 +1,7 @@
 import { useParams } from "react-router";
 import apiRoutes from "../../api/apiRoutes";
 import useFetch from "../../hooks/useFetch";
-import Loader from "../../../../lesson_07/src/components/Loader";
+import Loader from "../../components/Loader";
 import styles from './TeachersDetail.module.css'
 
 function TeachersDetail() {
