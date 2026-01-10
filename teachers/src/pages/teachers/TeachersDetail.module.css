@@ -1,0 +1,19 @@
+.detailContainer{
+display:flex;
+gap:50px;
+}
+.detailImage{
+border-radius: 50%;
+width:300px;
+overflow:hidden;
+}
+.detailInfo{
+color:grey;
+}
+.detailSubject{
+	font-size: 21px;
+	margin-top:20px;
+	span{
+		font-weight:700;
+	}
+}

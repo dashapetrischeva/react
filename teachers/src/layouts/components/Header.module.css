@@ -1,0 +1,15 @@
+.container {
+  color: white;
+  display: flex;
+  gap: 20px;
+  padding:20px;
+  background-color: #01a923;
+}
+.link {
+  color: white;
+  margin: 20px;
+}
+.active {
+  color: orange;
+  text-decoration: underline;
+}

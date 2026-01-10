@@ -1,0 +1,41 @@
+h1{
+	color: #01a923;
+    font-weight: 700;
+    font-size: 36px;
+}
+.formField {
+  margin-bottom: 20px;
+}
+
+.formButtons button {
+  background: #01a923;
+  color: #fff;
+  padding: 7px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background 0.3s;
+  margin-right: 10px;
+  text-transform: uppercase;
+}
+.formButtons button:hover {
+  background: #01841b;
+}
+
+.fieldLabel {
+  line-height: 150%;
+  margin-right: 10px;
+    color:#333;
+}
+
+.fieldInput input{
+width:100%;
+  background-color: #333;
+    line-height: 150%;
+  outline: 1px solid #333;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-inline: 10px;
+
+  color:#fff;
+}

@@ -1,0 +1,96 @@
+.cardBlock{
+ margin-block: 30px;
+}
+
+.container {
+  display: flex;
+ 
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid #a5d6a7; /* світло-зелений */
+  border-radius: 8px;
+  padding: 10px 16px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  font-family: sans-serif;
+}
+
+.section1 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.section1 img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #4caf50; /* зелена рамка */
+}
+
+.section1 div > div:first-child {
+  font-weight: bold;
+  color: #388e3c; /* темно-зелений */
+  font-size: 16px;
+}
+
+.section1 div > div:last-child {
+  color: #757575; /* сірий */
+  font-size: 14px;
+}
+
+.section1 div > div:last-child::before {
+  content: 'Subject: ';
+  font-weight: bold;
+  color: #424242;
+  margin-right:5px;
+}
+
+.section2 button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+margin:0;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.section2 button:hover {
+  background-color: #388e3c;
+}
+
+.cardLink{
+color:#01a923;
+font-weight:700;
+font-size: 21px;
+margin-bottom:10px;
+}
+.buttons{
+  display:flex;
+  gap:16px;
+width:100%;
+
+}
+.delete{
+  background-color:red;
+  align-self: stretch;
+  width:50%;
+  margin-top:20px;
+}
+.edit{
+  display:block;
+   width:50%;
+  background-color:blue;
+  line-height: 2.5rem;
+    color: #fff;
+    padding-inline: 25px;
+    border-radius: 5px;
+    box-shadow: 0.3125rem 0.3125rem 0.9375rem rgba(0, 0, 0, 0.15);
+   margin-top:20px;
+    cursor: pointer;
+    align-self: stretch;
+    text-align: center;
+}

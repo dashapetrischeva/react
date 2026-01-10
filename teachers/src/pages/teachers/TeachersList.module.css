@@ -1,0 +1,8 @@
+.buttons{
+display:flex;
+gap:16px;
+margin-top:20px;
+}
+.meetingButton{
+background-color:#0000ff;
+}
