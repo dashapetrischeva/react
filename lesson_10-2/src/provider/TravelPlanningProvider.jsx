@@ -7,9 +7,8 @@ function TravelPlanningProvider({ children }) {
 		selectedBuses: [],
 		selectedHotels: []
 	});
-
 	return (
-		<TravelPlanningContext.Provider
+		<TravelPlanningContext
 			value={{
 				selectedBuses: state.selectedBuses,
 				selectedHotels: state.selectedHotels,
@@ -17,7 +16,7 @@ function TravelPlanningProvider({ children }) {
 			}}
 		>
 			{children}
-		</TravelPlanningContext.Provider>
+		</TravelPlanningContext>
 	);
 }
 
