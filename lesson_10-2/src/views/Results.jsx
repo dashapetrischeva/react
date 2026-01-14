@@ -14,34 +14,43 @@ function Results() {
 			<h2>Selected buses</h2>
 			<div className={styles.list}>
 				{selectedBuses.length > 0 ? (
-					selectedBuses.map(bus => (
-						<ItemCard
-							key={bus.id}
-							id={bus.id}
-							title={bus.title}
-							img={bus.img}
-							type={bus.type}
-							isBus
-						/>
-					))
+					buses
+						.filter(bus => selectedBuses.includes(bus.id))
+						.map(bus => (
+							<ItemCard
+								key={bus.id}
+								id={bus.id}
+								title={bus.title}
+								img={bus.img}
+								type={bus.type}
+								isBus
+							/>
+						))
 				) : (
 					<p>No buses selected</p>
 				)}
 			</div>
 
+
+
+
+
 			<h2>Selected hotels</h2>
 			<div className={styles.list}>
 				{selectedHotels.length > 0 ? (
-					selectedHotels.map(hotel => (
-						<ItemCard
-							key={hotel.id}
-							id={hotel.id}
-							title={hotel.title}
-							img={hotel.img}
-							type={hotel.type}
-							isBus={false}
-						/>
-					))
+
+					hotels.filter(hotel => selectedHotels.includes(hotel.id))
+						.map(hotel => (
+							<ItemCard
+								key={hotel.id}
+								id={hotel.id}
+								title={hotel.title}
+								img={hotel.img}
+								type={hotel.type}
+								isBus={false}
+							/>
+						))
+
 				) : (
 					<p>No hotels selected</p>
 				)}
