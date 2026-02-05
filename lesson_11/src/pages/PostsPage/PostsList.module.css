@@ -1,0 +1,12 @@
+.postsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+color:#4b3f3f;
+  width: 100%;
+  min-width: 0;
+}
+h1{
+  margin-top:0;
+}

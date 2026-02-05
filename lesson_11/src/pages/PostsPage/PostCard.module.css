@@ -1,0 +1,24 @@
+
+/* Main card styles */
+.postCard {
+    width: 100%;
+    border: 1px solid rgba(34, 35, 39, 0.06);
+    border-radius: 12px;
+    padding: 18px;
+    box-shadow: 0 4px 12px #20212414;
+    transition: all .2s ease;
+
+}
+.postCard:hover {
+  box-shadow: 0 6px 24px rgba(75, 63, 63, 0.162);
+  transform: translateY(-4px) scale(1.02);
+  cursor: pointer;
+}
+.postTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #4b3f3f;
+  word-break: break-word;
+  margin:0;
+  padding:0;
+}

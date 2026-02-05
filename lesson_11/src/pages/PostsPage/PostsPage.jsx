@@ -1,0 +1,24 @@
+import { useDispatch, useSelector } from "react-redux";
+import PostsList from "./PostsList";
+import { useEffect } from "react";
+import { fetchPosts } from "@/store/slices/postsThunk";
+
+function PostsPage() {
+	const { posts, meta, loading, error } = useSelector(state => state.posts);
+	const dispatch = useDispatch();
+	useEffect(() => {
+		dispatch(fetchPosts(meta));
+	}, []);
+	const onPageSelect = (page) => {
+		dispatch(fetchPosts({ ...meta, page }));
+	}
+	return (
+		<div>
+			{!!posts && <PostsList posts={posts} />}
+			{!!error && <div>{error}</div>}
+			{!!loading && <div>Loading...</div>}
+		</div>
+	);
+}
+
+export default PostsPage;

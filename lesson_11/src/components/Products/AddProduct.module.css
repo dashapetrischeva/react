@@ -1,0 +1,37 @@
+
+.formField {
+  margin-bottom: 20px;
+}
+.formButtons {
+  padding-bottom: 20px;
+
+}
+.formButtons button {
+  background: #f0858b;
+  color: #fff;
+  padding: 7px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background 0.3s;
+  margin-right: 10px;
+  text-transform: uppercase;
+}
+.formButtons button:hover {
+  background: #d96e76;
+}
+
+.fieldLabel {
+  line-height: 150%;
+  margin-right: 10px;
+}
+.fieldInput input{
+  line-height: 150%;
+  outline: 1px solid #333;
+  border:none;
+  width: 100%;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-inline: 10px;
+  color: #333;
+}
