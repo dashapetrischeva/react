@@ -1,4 +1,4 @@
-import { routes } from '@/router/router'
+import { routes } from '@/router/Router'
 import { NavLink } from 'react-router'
 import styles from './MainMenu.module.css'
 
