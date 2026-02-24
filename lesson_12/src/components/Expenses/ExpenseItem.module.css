@@ -1,0 +1,138 @@
+/* Expense item row styling */
+.expenseItem {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+  background: var(--color-card, #fff);
+  border-radius: 10px;
+  border: 1px solid #e0e7ff;
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.06);
+  transition: all 0.2s ease;
+  font-weight: 500;
+  color: var(--color-text, #213547);
+}
+
+.expenseItem:hover {
+  box-shadow: 0 4px 16px rgba(99, 102, 241, 0.12);
+  border-color: #c7d2fe;
+  transform: translateY(-2px);
+}
+
+/* Action buttons container */
+.expenseItem > div:last-child {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Button styling */
+.delete {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: #ef4444;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.2);
+  white-space: nowrap;
+}
+
+.delete:hover {
+  background: #dc2626;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+  transform: translateY(-1px);
+}
+
+.delete:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 4px rgba(239, 68, 68, 0.2);
+}
+
+.repeat {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: orange;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(220, 121, 0, 0.2);
+  white-space: nowrap;
+}
+
+.repeat:hover {
+  background:rgb(209, 137, 2);
+  box-shadow: 0 4px 12px rgba(220, 121, 0, 0.2);
+  transform: translateY(-1px);
+}
+
+.repeat:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 4px rgba(220, 121, 0, 0.2);
+}
+
+/* Category cell */
+.expenseItem > div:first-child {
+  font-weight: 600;
+  color: var(--color-primary-dark, #3730a3);
+}
+
+/* Money cell */
+.expenseItem > div:nth-child(2) {
+  text-align: center;
+  font-weight: 700;
+
+  font-size: 1.05rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .expenseItem {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .delete,
+  .repeat {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+  }
+
+  .expenseItem > div:last-child {
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .expenseItem {
+    grid-template-columns: 1fr 0.8fr 0.8fr;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .delete,
+  .repeat {
+    padding: 0.35rem 0.6rem;
+    font-size: 0.8rem;
+  }
+
+  .expenseItem > div:last-child {
+    gap: 0.3rem;
+    flex-wrap: wrap;
+  }
+
+  .expenseItem > div:nth-child(2) {
+    font-size: 1rem;
+  }
+}
