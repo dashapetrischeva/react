@@ -1,0 +1,132 @@
+:root {
+	--accent: #646cff;
+	--muted: #a0a0a0;
+	--card-bg: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+	--surface: rgba(255,255,255,0.03);
+	--radius: 12px;
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	padding: 2rem 1rem;
+}
+
+.card {
+	width: 100%;
+	max-width: 900px;
+	background: var(--card-bg);
+	border-radius: var(--radius);
+	padding: 2rem;
+	box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+	border: 1px solid rgba(255,255,255,0.04);
+	box-sizing: border-box;
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+	margin-bottom: 1rem;
+}
+
+.title {
+	margin: 0;
+	font-size: 1.5rem;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.field {
+	display: flex;
+	flex-direction: column;
+	gap: 0.4rem;
+	text-align: left;
+}
+
+.label {
+	font-size: 0.9rem;
+	color: var(--muted);
+}
+
+.input,
+.textarea,
+.select {
+	background: transparent;
+	border: 1px solid rgba(154, 154, 154, 0.414);
+	padding: 0.75rem 1rem;
+	border-radius: 8px;
+	color: inherit;
+	font: inherit;
+	box-sizing: border-box;
+}
+
+.textarea { min-height: 160px; resize: vertical; }
+
+.input:focus,
+.textarea:focus,
+.select:focus {
+	outline: none;
+	box-shadow: 0 6px 18px rgba(100,108,255,0.08);
+	border-color: var(--accent);
+}
+
+.actions {
+	display: flex;
+	gap: 0.75rem;
+	margin-top: 0.25rem;
+	justify-content: flex-end;
+}
+
+.btn {
+	padding: 0.6rem 1rem;
+	border-radius: 10px;
+	border: 1px solid transparent;
+	cursor: pointer;
+	font: inherit;
+	transition: transform 140ms ease, filter 140ms ease;
+}
+
+.btnPrimary {
+	background: var(--accent);
+	color: white;
+	box-shadow: 0 8px 24px rgba(100,108,255,0.12);
+}
+
+.btnPrimary:hover { transform: translateY(-1px); filter: brightness(0.98); }
+
+.btnSecondary {
+	background: transparent;
+	border: 1px solid rgba(255,255,255,0.06);
+	color: inherit;
+}
+
+.preview {
+	margin-top: 1rem;
+	border-radius: 8px;
+	padding: 1rem;
+	background: rgba(0,0,0,0.22);
+	border: 1px solid rgba(255,255,255,0.03);
+}
+
+.error {
+	color: #ff6b6b;
+	font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+	.card { padding: 1rem; }
+	.actions { flex-direction: column-reverse; align-items: stretch; }
+	.btn { width: 100%; }
+}
+
+.success {
+	color: #6fe08a;
+	font-size: 0.95rem;
+}
+
