@@ -90,7 +90,7 @@ function DoctorsForm() {
 					/>
 				</div>
 				<div className={styles.formGroup}>
-					<label htmlFor="notes" className={styles.label}>Doctors hours:</label>
+					<label htmlFor="notes" className={styles.label}>Info:</label>
 					<input
 						type="text"
 						id="notes"
