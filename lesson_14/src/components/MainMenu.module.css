@@ -1,0 +1,36 @@
+.container{
+	max-width: 76.875rem;
+   margin: 0 auto;
+   padding-inline: 0.9375rem;
+}
+
+.nav {
+  background-color: var(--primary-blue);
+  padding: 0.5rem 1rem;
+}
+
+.navList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.navLink {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.navLink:hover {
+  background-color: var(--dark-blue);
+}
+
+.activeLink {
+  text-decoration: underline;
+}
