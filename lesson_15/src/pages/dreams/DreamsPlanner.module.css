@@ -1,0 +1,28 @@
+.plannerContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  padding: 30px;
+  border-radius: 20px;
+
+
+}
+
+.plannerTitle {
+  margin: 0;
+  font-size: 2.4rem;
+  letter-spacing: -0.8px;
+  color: var(--text-h);
+  text-align: center;
+}
+
+.plannerEmpty {
+  padding: 28px;
+  border-radius: 18px;
+  background: rgba(255, 92, 163, 0.08);
+  border: 1px dashed rgba(255, 92, 163, 0.35);
+  color: var(--text);
+  text-align: center;
+  font-weight: 500;
+}
+

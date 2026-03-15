@@ -1,0 +1,26 @@
+.editDreamContainer {
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 32px 28px 44px;
+
+}
+
+.editDreamTitle {
+  margin: 0 0 18px;
+  font-size: 2.2rem;
+  letter-spacing: -0.7px;
+  color: var(--text-h);
+  text-align: center;
+}
+
+.status {
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: rgba(255, 92, 163, 0.12);
+  border: 1px solid rgba(255, 92, 163, 0.22);
+  color: rgba(91, 44, 82, 0.9);
+  font-weight: 500;
+  margin: 16px 0 0;
+  text-align: center;
+}
+
