@@ -7,8 +7,9 @@ import { PostCard } from '@/entities/post/ui/PostCard'
 import { useSelector } from 'react-redux'
 import { selectAuthUser } from '@/features/auth'
 import { roles } from '@/shared/config/roles'
-import { EditPostButton } from '@/features/post/editPost/ui/editPostButton'
-import { DeletePostButton } from '@/features/post/deletePost/ui/deletePostButton'
+import { EditPostButton } from '@/features/post/editPost/ui/EditPostButton'
+import { DeletePostButton } from '@/features/post/deletePost/ui/DeletePostButton'
+
 export function PostList() {
 	const user = useSelector(selectAuthUser)
 	const [page, setPage] = useState(1)
