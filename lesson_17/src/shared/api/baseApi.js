@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 const baseQuery = fetchBaseQuery({
-	baseUrl: 'https://beckend-auth-supu.onrender.com/api/',
+	baseUrl: 'https://beckend-auth-1.onrender.com/api/',
 
 	credentials: 'include',
 	prepareHeaders: (headers, { getState, extra }) => {
