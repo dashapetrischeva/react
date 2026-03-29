@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 const baseQuery = fetchBaseQuery({
-	baseUrl: 'http://localhost:4000/api/',
+	baseUrl: 'https://beckend-auth-supu.onrender.com/api/',
 	credentials: 'include',
 	prepareHeaders: (headers, { getState, extra }) => {
 		// Якщо skipAuth не вказано або false — додаємо токен
