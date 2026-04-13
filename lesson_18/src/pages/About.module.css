@@ -1,0 +1,23 @@
+.about {
+  display: grid;
+  place-items: center;
+  padding: 48px 28px;
+  border-radius: 22px;
+ 
+  text-align: center;
+  gap: 16px;
+}
+
+.title {
+  margin: 0;
+  font-size: 2.4rem;
+  color: var(--text-h);
+}
+
+.description {
+  max-width: 660px;
+  color: rgba(91, 44, 82, 0.85);
+  font-size: 1.05rem;
+  line-height: 1.55;
+  margin: 0;
+}
