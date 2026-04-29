@@ -1,0 +1,96 @@
+{
+	"home": {
+		"title": "Dream Planner",
+		"subtitle": "Keep track of your big ideas, set goals that matter, and make every day a little more magical."
+	},
+	"dreams": {
+		"title": "Dream Planner",
+		"subtitle": "Dreams list",
+		"addButton": "Add dream",
+		"empty": "No dreams yet",
+		"loginRequired": "Please login to see your dreams"
+	},
+	"actions": {
+		"edit": "Edit",
+		"editing": "Editing...",
+		"add": "Add",
+		"adding": "Adding...",
+		"delete": "Delete",
+		"deleting": "Deleting...",
+		"save": "Save",
+		"cancel": "Cancel"
+	},
+	"editDream": {
+		"titleEdit": "Edit dream",
+		"titleCreate": "Create new dream",
+		"notFound": "Dream not found"
+	},
+	"loginPage": {
+		"loginTitle": "Login",
+		"signupTitle": "Sign Up",
+		"switchToLogin": "Login",
+		"switchToSignup": "Create account"
+	},
+	"loginForm": {
+		"emailPlaceholder": "Email",
+		"passwordPlaceholder": "Password",
+		"loginButton": "Login",
+		"googleButton": "Continue with Google",
+		"loginError": "Login error",
+		"googleError": "Google authentication error"
+	},
+	"auth": {
+		"loginLink": "Login",
+		"logoutButton": "Logout"
+	},
+	"signUpForm": {
+		"namePlaceholder": "Name",
+		"emailPlaceholder": "Email",
+		"passwordPlaceholder": "Password",
+		"submitButton": "Create account",
+		"error": "Registration error"
+	},
+	"common": {
+		"loading": "Loading..."
+	},
+	"messages": {
+		"confirmDelete": "Are you sure you want to delete this item?",
+		"deleteError": "Error deleting item!",
+		"loadingDreams": "Loading dreams...",
+		"loadingError": "Error loading dreams. Try refreshing."
+	},
+	"form": {
+		"description": "Dream description",
+		"year": "Achieve dreams year",
+		"friend": "Friend"
+	},
+	"menu": {
+		"home": "Home",
+		"dreams": "Dreams planner",
+		"login": "Login"
+	},
+	"validation": {
+		"descriptionRequired": "Description is required",
+		"descriptionMax": "Maximum length is 200 characters",
+		"yearType": "Year must be a number",
+		"yearRequired": "Year is required",
+		"yearMin": "Minimum year is current year",
+		"yearMax": "Maximum year is 2050",
+		"emailRequired": "Email is required",
+		"emailInvalid": "Invalid email format",
+		"passwordRequired": "Password is required",
+		"passwordMin": "Minimum length is 6 characters",
+		"nameRequired": "Name is required",
+		"nameMin": "Minimum length is 2 characters"
+	},
+	"page404": {
+		"notFound": "Page not found"
+	},
+	"errorBoundary": {
+		"title": "Something went wrong",
+		"tryAgain": "Try again"
+	},
+	"search": {
+		"placeholder": "Search dreams..."
+	}
+}

@@ -1,0 +1,96 @@
+{
+	"home": {
+		"title": "Планер мрій",
+		"subtitle": "Зберігайте свої великі ідеї, ставте важливі цілі та робіть кожен день трохи більш чарівним."
+	},
+	"dreams": {
+		"title": "Планер мрій",
+		"subtitle": "Список мрій",
+		"addButton": "Додати мрію",
+		"empty": "Поки що немає мрій",
+		"loginRequired": "Будь ласка, увійдіть, щоб побачити свої мрії"
+	},
+	"actions": {
+		"edit": "Редагувати",
+		"editing": "Редагування...",
+		"add": "Додати",
+		"adding": "Додавання...",
+		"delete": "Видалити",
+		"deleting": "Видалення...",
+		"save": "Зберегти",
+		"cancel": "Скасувати"
+	},
+	"editDream": {
+		"titleEdit": "Редагувати мрію",
+		"titleCreate": "Створити нову мрію",
+		"notFound": "Мрія не знайдена"
+	},
+	"loginPage": {
+		"loginTitle": "Вхід",
+		"signupTitle": "Реєстрація",
+		"switchToLogin": "Увійти",
+		"switchToSignup": "Зареєструватися"
+	},
+	"loginForm": {
+		"emailPlaceholder": "Електронна пошта",
+		"passwordPlaceholder": "Пароль",
+		"loginButton": "Увійти",
+		"googleButton": "Продовжити з Google",
+		"loginError": "Помилка входу",
+		"googleError": "Помилка Google-автентифікації"
+	},
+	"auth": {
+		"loginLink": "Увійти",
+		"logoutButton": "Вийти"
+	},
+	"signUpForm": {
+		"namePlaceholder": "Ім'я",
+		"emailPlaceholder": "Електронна пошта",
+		"passwordPlaceholder": "Пароль",
+		"submitButton": "Створити обліковий запис",
+		"error": "Помилка реєстрації"
+	},
+	"common": {
+		"loading": "Завантаження..."
+	},
+	"messages": {
+		"confirmDelete": "Ви впевнені, що хочете видалити цей елемент?",
+		"deleteError": "Помилка при видаленні!",
+		"loadingDreams": "Завантаження мрій...",
+		"loadingError": "Помилка завантаження мрій. Спробуйте оновити сторінку."
+	},
+	"form": {
+		"description": "Опис мрії",
+		"year": "Рік досягнення мрії",
+		"friend": "Друг"
+	},
+	"menu": {
+		"home": "Головна",
+		"dreams": "Планер мрій",
+		"login": "Вхід"
+	},
+	"validation": {
+		"descriptionRequired": "Опис обов'язковий",
+		"descriptionMax": "Максимум 200 символів",
+		"yearType": "Рік повинен бути числом",
+		"yearRequired": "Введіть рік",
+		"yearMin": "Мінімальний рік — поточний",
+		"yearMax": "Максимальний рік — 2050",
+		"emailRequired": "Введіть email",
+		"emailInvalid": "Невірний формат email",
+		"passwordRequired": "Введіть пароль",
+		"passwordMin": "Мінімум 6 символів",
+		"nameRequired": "Введіть ім'я",
+		"nameMin": "Мінімум 2 символи"
+	},
+	"page404": {
+		"notFound": "Сторінку не знайдено"
+	},
+	"errorBoundary": {
+		"title": "Щось пішло не так",
+		"tryAgain": "Спробувати знову"
+	},
+	"search": {
+		"placeholder": "Шукати мрії..."
+	}
+}

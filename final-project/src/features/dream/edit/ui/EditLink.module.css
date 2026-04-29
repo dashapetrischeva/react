@@ -1,0 +1,24 @@
+.link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.35);
+  border: 1px solid rgba(255, 92, 163, 0.25);
+  transition: transform 150ms ease, background 150ms ease, border 150ms ease;
+}
+
+.link:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 92, 163, 0.12);
+  border-color: rgba(255, 92, 163, 0.35);
+}
+
+.link:active {
+  transform: translateY(0);
+}
