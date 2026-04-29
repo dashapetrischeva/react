@@ -1,0 +1,22 @@
+{
+	"data": [
+		{
+			"id": "1",
+			"description": "Travel to Paris for vacation",
+			"year": 2025,
+			"friend": "Alice"
+		},
+		{
+			"id": "2",
+			"description": "Buy a new car",
+			"year": 2026,
+			"friend": "Bob"
+		},
+		{
+			"id": "3",
+			"description": "Learn to play guitar",
+			"year": 2024,
+			"friend": "Charlie"
+		}
+	]
+}
