@@ -1,11 +1,4 @@
-// Задача 2. Таблиця з фільтрацією та сортуванням, чутлива до UI 
-// Створіть компонент DataGrid (батьківський) та GridRow (дочірній).
-// DataGrid отримує великий масив даних, має поле вводу для фільтрації, кнопки для сортування за різними колонками.
-// GridRow (обгорнутий у React.memo) відображає один рядок даних.
-// Використайте useDeferredValue для пошукового запиту та/або параметрів сортування.
-// Використайте useMemo для обчислення відфільтрованих та відсортованих даних на основі відкладених значень.
-// Використайте useCallback для функцій-обробників сортування та інших інтерактивних елементів, які передаються до дочірніх компонентів.
-// Мета: забезпечити швидкий відгук на введення та кліки, навіть якщо обробка даних займає час.
+
 import { useState, useDeferredValue, useEffect, useRef, useCallback, useMemo } from 'react'
 import GridRow from './GridRow'
 import styles from './DataGrid.module.css'
@@ -19,7 +12,7 @@ function DataGrid() {
 	useEffect(() => {
 
 
-		// Скасовуємо попередній запит
+
 		if (abortControllerRef.current) {
 			abortControllerRef.current.abort()
 		}
@@ -63,20 +56,20 @@ function DataGrid() {
 
 	return (
 		<div>
-			<h2>Таблиця з фільтрацією за ім'ям та сортуванням по ціні</h2>
+			<h2>Table with filtering by name and sorting by price</h2>
 			<div className={styles.formField}>
 				<input
 					type="text"
 					value={query}
 					onChange={(e) => setQuery(e.target.value)}
-					placeholder="Введіть назву товару"
+					placeholder="Enter product name"
 					className={styles.fieldInput}
 				/>
 				<button className={styles.button} onClick={handleUp}><img src="./up.png" alt="" /></button>
 				<button className={styles.button} onClick={handleDown}><img src="./down.png" alt="" /></button>
 			</div>
 			{isLoading ? (
-				<p>Завантаження...</p>
+				<p>Loading...</p>
 			) : (
 				<ul className={styles.list}>
 					{visibleProducts.length ? (
@@ -84,7 +77,7 @@ function DataGrid() {
 							<GridRow key={product.id} product={product} />
 						))
 					) : (
-						<p>Немає результатів</p>
+						<p>No results found</p>
 					)}
 				</ul>
 			)}

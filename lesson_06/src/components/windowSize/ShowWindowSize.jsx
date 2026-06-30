@@ -10,7 +10,7 @@ function ShowWindowSize() {
 
 	return (
 		<div className={styles.showWindowSize}>
-			<h2>Розмір вікна браузера</h2>
+			<h2>Browser window size</h2>
 			{device === 'desktop' && <img src='./desktop.png' alt="Icon" />}
 			{device === 'tablet' && <img src='./tablet.png' alt="Icon" />}
 			{device === 'phone' && <img src='./phone.png' alt="Icon" />}

@@ -1,7 +1,7 @@
 export const notebooksList = [
   {
     id: 1,
-    title: 'Ноутбук ASUS TUF Gaming A15 (2023)',
+    title: 'Laptop ASUS TUF Gaming A15 (2023)',
     imgSrc:
       'https://content.rozetka.com.ua/goods/images/original/349586929.jpg',
     discount: 8000,
@@ -11,7 +11,7 @@ export const notebooksList = [
   },
   {
     id: 2,
-    title: 'Ноутбук ASUS TUF Gaming F15 FX506HF-HN038 ...',
+    title: 'Laptop ASUS TUF Gaming F15 FX506HF-HN038 ...',
     imgSrc:
       'https://content.rozetka.com.ua/goods/images/original/323437245.jpg',
     discount: 6500,
@@ -21,7 +21,7 @@ export const notebooksList = [
   },
   {
     id: 3,
-    title: 'Ноутбук HP Victus Gaming Laptop ...',
+    title: 'Laptop HP Victus Gaming Laptop ...',
     imgSrc:
       'https://content.rozetka.com.ua/goods/images/original/368225648.jpg',
     discount: 5000,

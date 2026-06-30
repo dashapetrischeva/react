@@ -1,4 +1,4 @@
-// Відфільтрувати список товарів за назвою. Список товарів - масив обєктів з полями name, category
+
 
 import { useId, useState, useMemo } from 'react'
 import ItemsList from './ItemsList'
