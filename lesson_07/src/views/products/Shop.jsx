@@ -21,7 +21,7 @@ function Shop() {
 							<ProductItem key={prod.id} product={prod} />
 						))}
 					</div>
-					<Link to={frontRoutes.navigate.home} className={styles.home}>	На головну</Link>
+					<Link to={frontRoutes.navigate.home} className={styles.home}>Home</Link>
 				</div>
 			)}
 		</div>

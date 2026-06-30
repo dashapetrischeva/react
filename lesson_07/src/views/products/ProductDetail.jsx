@@ -15,7 +15,7 @@ function ProductDetail() {
 					<div className={styles.detailImage}><img src={product.imageUrl} alt="product" /></div>
 					<div className={styles.detailInfo}>
 						<h1>{product.name}</h1>
-						<div className={styles.detailPrice}>Ціна: {product.price}</div>
+						<div className={styles.detailPrice}>Price: {product.price}</div>
 					</div>
 
 				</div>

@@ -1,10 +1,10 @@
 function Contacts() {
 	return (
 		<div>
-			<h1>Нас дуже легко знайти:</h1>
-			<p>1) Потягом до Ужгорода</p>
-			<p>2) Шукаєте бабу Галю (вона дорогу покаже)</p>
-			<p>До зустрічі!!!</p>
+			<h1>We are very easy to find:</h1>
+			<p>1) By train to Uzhhorod</p>
+			<p>2) Looking for Grandma Galya (she will show you the way)</p>
+			<p>See you soon!!!</p>
 		</div>
 	);
 }
