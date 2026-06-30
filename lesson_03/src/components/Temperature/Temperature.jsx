@@ -12,10 +12,10 @@ function Temperature() {
 	}
 	return (
 		<section className={bgColor}>
-			<h2>Задача 2</h2>
+			<h2>Task 2</h2>
 			<div className={styles.form__field}>
 				<label className={styles.field__label}>
-					Введіть температуру:</label>
+					Enter temperature:</label>
 				<input type="number" className={styles.field__input} value={temperature} onChange={(e) => setTemperature(e.target.value)} />
 
 			</div>

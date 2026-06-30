@@ -2,12 +2,12 @@ import { useState } from 'react';
 import styles from './AthletesList.module.css'
 function AthletesList() {
 	const [generalList, setGeneralList] = useState([
-		'Артем Коваленко',
-		'Богдан Савчук',
-		'Олександр Петренко',
-		'Ірина Шевчук',
-		'Марина Ткаченко',
-		'Віталій Гриценко'
+		'Artem Kovalenko',
+		'Bogdan Savchuk',
+		'Oleksandr Petrenko',
+		'Iryna Shevchuk',
+		'Marina Tkachenko',
+		'Vitaliy Grytsenko'
 	])
 	const [selectedList, setSelectedList] = useState([])
 	function generalListClickHandler(el) {
@@ -21,10 +21,10 @@ function AthletesList() {
 
 	return (
 		<section>
-			<h2>Задача 5</h2>
+			<h2>Task 5</h2>
 			<div className={styles['athletes-lists']}>
 				<div className={styles['athletes-lists__general']}>
-					<h3 className={styles["athletes-lists__title"]}>Загальний список</h3>
+					<h3 className={styles["athletes-lists__title"]}>General List</h3>
 					<ul className={styles["athletes-lists__list"]}>
 						{generalList.map((el) =>
 						(<li key={el} className={styles["athletes-lists__item"]} onClick={() => generalListClickHandler(el)}>{el}</li>
@@ -32,7 +32,7 @@ function AthletesList() {
 					</ul>
 				</div>
 				<div className={styles["athletes-lists__selected"]}>
-					<h3 className={styles["athletes-lists__title"]}>Обрані для змагання</h3>
+					<h3 className={styles["athletes-lists__title"]}>Selected for Competition</h3>
 					<ul className={styles["athletes-lists__list"]}>
 						{selectedList.map((el) =>
 						(<li key={el} className={styles["athletes-lists__item"]} onClick={() => selectedListClickHandler(el)}>{el}</li>
