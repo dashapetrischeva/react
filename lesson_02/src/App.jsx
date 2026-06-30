@@ -17,9 +17,7 @@ function App() {
       <div className="block">
         <TicketSelection />
       </div>
-      <div className="block">
-        <EnglishTrainer />
-      </div>
+
       <div className="block">
         <WorkersList />
       </div>

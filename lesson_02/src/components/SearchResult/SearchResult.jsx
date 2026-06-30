@@ -3,27 +3,27 @@ function SearchResult() {
 	const results = [
 		{
 			id: 1,
-			url: 'w3schoolsua.github.io/react/index.html',
-			title: 'React Підручник - W3Schools українською - GitHub Pages',
-			text: 'Підручник React. Навчання на прикладах. Навчання за вправами. Вікторина. Створити додаток React. Запустіть програму React. Що ви вже повинні знати.'
+			url: 'https://www.coursera.org/learn/react-basics',
+			title: 'React Basics Course',
+			text: 'Learn React Basics today — React is a powerful JavaScript library that you can use to build user interfaces for web and mobile applications (apps) Learn At Your Own Pace. Flexible Online'
 		},
 		{
 			id: 2,
-			url: 'https://uk.legacy.reactjs.org/tutorial/tutorial.html',
-			title: 'Посібник: знайомство з React',
-			text: 'Даний посібник не потребує попереднього ознайомлення з React. Перед початком роботи. У цьому посібнику ми працюватимемо над створенням маленької гри.'
+			url: 'https://www.udemy.com/',
+			title: 'Udemy Online Course',
+			text: 'Udemy — Lerne online mit praxisnahen Kursen. Starte jetzt deinen Online-Kurs. ChatGPT Lernen. Lernen jetzt anfangen. Verbessere deine Skills. Verbessere deine Karriere. Investiere in dich selbst.'
 		},
 		{
 			id: 3,
-			url: 'w3schoolsua.github.io/react/react_getstarted.html',
-			title: 'React Старт - W3Schools українською',
-			text: 'Найшвидший спосіб почати вивчати React — це написати React безпосередньо у своїх файлах HTML. Почніть із додавання трьох скриптів: перші два дозволяють нам ...'
+			url: 'https://brilliant.org/topics/coding/tutor/',
+			title: 'Learn Coding for Free',
+			text: "From Beginner to Advanced — Step-by-step interactive coding lessons start at your level and help you master key ideas. Learn by doing – Interactive problem solving that's effective and fun. "
 		},
 
 	]
 	return (
 		<>
-			<h2>Задача 5</h2>
+			<h2>Task 5</h2>
 			<div className={styles.results}>
 				{results.map((result) => (
 					<div className={styles.itemResult} key={result.id}>

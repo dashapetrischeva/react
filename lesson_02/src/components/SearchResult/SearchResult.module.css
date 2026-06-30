@@ -10,7 +10,7 @@
 	--danger: #e63946;
 }
 
-/* Контейнер для результатов поиска */
+
 .results {
 	display: flex;
 	flex-direction: column;
@@ -20,10 +20,10 @@
 	padding: 0 16px;
 }
 
-/* Отдельный результат поиска (карточка) */
+
 .itemResult{
 	background: linear-gradient(135deg, var(--card), rgba(255,255,255,0.7));
-	border: 1px solid var(--border-light);
+	border: 1px solid rgba(16,24,40,0.06);
 	border-radius: 12px;
 	padding: 18px;
 	box-shadow: 0 4px 12px rgba(32,33,36,0.08);
@@ -38,7 +38,7 @@
 	background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(240,133,139,0.02));
 }
 
-/* URL ссылка */
+
 .itemResult__url {
 	display: inline-block;
 	font-size: 12px;
@@ -55,7 +55,7 @@
 	color: var(--accent);
 }
 
-/* Заголовок результата */
+
 .itemResult__title {
 	font-size: 16px;
 	font-weight: 700;
@@ -69,7 +69,7 @@
 	color: var(--accent);
 }
 
-/* Описание результата */
+
 .itemResult__text {
 	font-size: 13px;
 	color: var(--muted);
@@ -78,7 +78,7 @@
 	font-weight: 400;
 }
 
-/* Заголовок страницы */
+
 h2 {
 	font-size: 20px;
 	font-weight: 700;

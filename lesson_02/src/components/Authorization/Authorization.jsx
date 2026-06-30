@@ -25,7 +25,7 @@ function Authorization() {
 
 	return (
 		<div>
-			<h2>Задача 1</h2>
+			<h2>Task 1</h2>
 			<form action="#" method="GET" className={styles.form}>
 				<div className={styles.form__field}>
 					<label className={styles.field__label}>
@@ -56,7 +56,7 @@ function Authorization() {
 					<img src="/smile.jpg" />
 				)}
 				{loginIsCorrect === false && (
-					<div className={classColor}>Доступ заборонено!</div>
+					<div className={classColor}>Access denied!</div>
 				)}
 			</div>
 		</div >
@@ -65,6 +65,3 @@ function Authorization() {
 
 export default Authorization;
 
-// Задача 1. Вводимо логіна і пароль. Якщо логін вірний відображаємо смайл. Якщо ні, то:
-// 1) якщо логін = Іван – колір повідомлення про помилку синій
-// 2) якщо хтось інший, то колір повідомлення червоний

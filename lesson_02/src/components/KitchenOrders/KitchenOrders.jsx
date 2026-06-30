@@ -32,45 +32,45 @@ function KitchenOrders() {
 	}
 	return (
 		<div>
-			<h2>Задача 6</h2>
+			<h2>Task 6</h2>
 			<form action="#" method="GET" className={styles.form}>
 				<div className={styles.form__field}>
 					<label className={styles.field__label}>
-						Нова замовлена страва
+						New ordered dish
 					</label>
 					<input type="text"
 						className={styles.field__input}
 						value={newOrder}
 						onChange={(e) => setNewOrder(e.target.value)} />
-					<button type="button" onClick={addOrder}>Додати</button>
+					<button type="button" onClick={addOrder}>Add</button>
 				</div>
 			</form >
 
 			<div className={styles.ordersLists}>
 				<div className={styles.ordersLists__waiting}>
-					<h3 className={styles.ordersLists__title}>Очікують на виконання</h3>
+					<h3 className={styles.ordersLists__title}>Waiting for preparation</h3>
 					<ul className={styles.ordersLists__list}>
 
 						{waitingList.map((order) => (
-							<li key={order.id}>{order.title} <button className={styles.buttonList} onClick={() => onPrepareClickHandler(order.id)}>Готувати</button></li>
+							<li key={order.id}>{order.title} <button className={styles.buttonList} onClick={() => onPrepareClickHandler(order.id)}>Prepare</button></li>
 						))}
 					</ul>
 				</div>
 				<div className={styles.ordersLists__processing}>
-					<h3 className={styles.ordersLists__title}>Виконуються</h3>
+					<h3 className={styles.ordersLists__title}>Processing</h3>
 					<ul className={styles.ordersLists__list}>
 
 						{processingList.map((order) => (
-							<li key={order.id}>{order.title} <button className={styles.buttonList} onClick={() => onCookedClickHandler(order.id)}>Приготовлено</button></li>
+							<li key={order.id}>{order.title} <button className={styles.buttonList} onClick={() => onCookedClickHandler(order.id)}>Cooked</button></li>
 						))}
 					</ul>
 				</div>
 				<div className={styles.ordersLists__completed}>
-					<h3 className={styles.ordersLists__title}>Готові до виносу</h3>
+					<h3 className={styles.ordersLists__title}>Completed</h3>
 					<ul className={styles.ordersLists__list}>
 
 						{completedList.map((order) => (
-							<li key={order.id}>{order.title} <button className={styles.buttonList} onClick={() => onServedClickHandler(order.id)}>Подано</button></li>
+							<li key={order.id}>{order.title} <button className={styles.buttonList} onClick={() => onServedClickHandler(order.id)}>Served</button></li>
 						))}
 					</ul>
 				</div>
@@ -81,8 +81,3 @@ function KitchenOrders() {
 
 export default KitchenOrders;
 
-// Задача 6. Задача. На кухню поступають замовлення. Спочатку ми додаємо їх у список “Очікують на виконання”,
-//  повар береться робити — замовлення переходить у список “Виконуються”,   якщо замовлення виконано — переходить у список “Готові до виносу”.
-//  Якщо натиснути на “Подано” - страва зникає з таблиці
-
-// waitingList, processingList, completedList
