@@ -1,6 +1,7 @@
 import styles from './PostsManager.module.css'
 import PostsList from './PostsList'
 import { useState } from 'react'
+
 function PostsManager({ postsList }) {
 	const [posts, setPosts] = useState(postsList)
 
@@ -23,12 +24,17 @@ function PostsManager({ postsList }) {
 			)
 		)
 	}
+
 	return (
 		<div className={styles.postsManager}>
-			<h1>Список постів</h1>
-			<PostsList postsList={posts} onLike={onLikeHandle} onDislike={onDislikeHandle} />
+			<h1>Posts List</h1>
+			<PostsList
+				postsList={posts}
+				onLike={onLikeHandle}
+				onDislike={onDislikeHandle}
+			/>
 		</div>
-	);
+	)
 }
 
-export default PostsManager; 
+export default PostsManager

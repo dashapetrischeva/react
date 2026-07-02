@@ -54,7 +54,7 @@ function TaskManager({ usersList, tasksList }) {
 
 	return (
 		<div className={styles.main}>
-			<h1>Менеджер задач</h1>
+			<h1>Task Manager</h1>
 			<AssignmentForm
 				usersList={usersList}
 				tasksList={tasksList}
