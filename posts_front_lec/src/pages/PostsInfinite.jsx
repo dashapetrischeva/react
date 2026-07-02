@@ -33,12 +33,13 @@ const PostsInfinitePage = () => {
     fetchNextPage,
   ])
 
-  if (isLoading) return <p>Завантаження...</p>
-  if (!isSuccess) return <p>Помилка завантаження.</p>
+  if (isLoading) return <p>Loading...</p>
+  if (!isSuccess) return <p>Failed to load posts.</p>
 
   return (
     <div>
-      <h2>Нескінченне завантаження постів</h2>
+      <h2>Infinite Post Loading</h2>
+
       {data.pages.map((page, i) => (
         <Fragment key={i}>
           {page.items.map((post) => (
@@ -48,14 +49,15 @@ const PostsInfinitePage = () => {
             >
               <h4>{post.title}</h4>
               <p>
-                Лайки: {post.likesNumber} | Дислайки: {post.dislikesNumber}
+                Likes: {post.likesNumber} | Dislikes: {post.dislikesNumber}
               </p>
             </div>
           ))}
         </Fragment>
       ))}
-      {isFetchingNextPage && <p>Завантаження наступної сторінки...</p>}
-      {!hasNextPage && <p>Більше постів немає.</p>}
+
+      {isFetchingNextPage && <p>Loading next page...</p>}
+      {!hasNextPage && <p>No more posts.</p>}
     </div>
   )
 }

@@ -10,9 +10,9 @@ const PostDetails = ({ postId }) => {
     skip: !postId,
   })
 
-  if (!postId) return <p>Оберіть пост, щоб побачити деталі.</p>
-  if (isLoading) return <p>Завантаження деталей...</p>
-  if (isError) return <p>Помилка завантаження деталей.</p>
+  if (!postId) return <p>Select a post to view its details.</p>
+  if (isLoading) return <p>Loading details...</p>
+  if (isError) return <p>Failed to load post details.</p>
 
   return (
     <div
@@ -24,10 +24,10 @@ const PostDetails = ({ postId }) => {
     >
       <h3>{post.title}</h3>
       <p>ID: {post.id}</p>
-      <p>Дата публікації: {new Date(post.publicationDate).toLocaleString()}</p>
-      <p>Лайки: {post.likesNumber}</p>
-      <p>Дислайки: {post.dislikesNumber}</p>
-      <p>{post.content || 'Без опису'}</p>
+      <p>Publication Date: {new Date(post.publicationDate).toLocaleString()}</p>
+      <p>Likes: {post.likesNumber}</p>
+      <p>Dislikes: {post.dislikesNumber}</p>
+      <p>{post.content || 'No description available.'}</p>
     </div>
   )
 }

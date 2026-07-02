@@ -10,7 +10,7 @@ const MainLayout = () => {
       <header
         style={{ background: '#282c34', padding: '10px', color: 'white' }}
       >
-        <h1>React + RTK Query додаток</h1>
+        <h1>React + RTK Query App</h1>
         <MainMenu />
       </header>
       <main style={{ flex: 1, padding: '20px' }}>

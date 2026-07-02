@@ -20,8 +20,8 @@ const PostsList = ({ onSelect }) => {
 
   const navigate = useNavigate()
 
-  if (isLoading) return <p>Завантаження...</p>
-  if (isError) return <p>Помилка завантаження постів</p>
+  if (isLoading) return <p>Loading...</p>
+  if (isError) return <p>Error loading posts</p>
 
   const { items, totalPages, remaining } = data
 
@@ -39,33 +39,33 @@ const PostsList = ({ onSelect }) => {
           >
             <strong>{post.title}</strong>
             <div>
-              Лайки: {post.likesNumber}{' '}
-              <button onClick={() => likePost(post.id)}>👍</button> Дислайки:{' '}
+              Likes: {post.likesNumber}{' '}
+              <button onClick={() => likePost(post.id)}>👍</button> Dislikes:{' '}
               {post.dislikesNumber}{' '}
               <button onClick={() => dislikePost(post.id)}>👎</button>{' '}
-              <button onClick={() => onSelect(post.id)}>Деталі</button>{' '}
+              <button onClick={() => onSelect(post.id)}>Details</button>{' '}
               <button onClick={() => navigate(`/posts/edit/${post.id}`)}>
-                Редагувати
+                Edit
               </button>{' '}
               <button
                 onClick={() => {
-                  if (window.confirm('Видалити пост?')) deletePost(post.id)
+                  if (window.confirm('Delete post?')) deletePost(post.id)
                 }}
               >
-                Видалити
+                Delete
               </button>
             </div>
           </li>
         ))}
       </ul>
-      {isFetching && <p>Оновлення...</p>}
+      {isFetching && <p>Updating...</p>}
       <hr />
       <div style={{ marginTop: '20px' }}>
         <button
           onClick={() => setPage((p) => Math.max(p - 1, 1))}
           disabled={page === 1}
         >
-          Попередня
+          Previous
         </button>
         {[...Array(totalPages)].map((_, i) => (
           <button
@@ -83,7 +83,7 @@ const PostsList = ({ onSelect }) => {
           onClick={() => setPage((p) => (remaining > 0 ? p + 1 : p))}
           disabled={remaining === 0}
         >
-          Наступна
+          Next
         </button>
       </div>
     </div>

@@ -6,8 +6,8 @@ import {
 } from '../api/postsApi'
 import styles from './PostEditPage.module.css'
 import { useNavigate, useParams } from 'react-router'
-function PostEditPage() {
 
+function PostEditPage() {
   const { id } = useParams()
   const postId = id
   const isEditMode = Boolean(postId)
@@ -20,6 +20,7 @@ function PostEditPage() {
   } = useGetPostByIdQuery(postId, {
     skip: !isEditMode,
   })
+
   const navigate = useNavigate()
   const [addPost, addState] = useAddPostMutation()
   const [editPost, editState] = useEditPostMutation()
@@ -30,7 +31,6 @@ function PostEditPage() {
     isPostLoading
 
   const isError = addState.isError || editState.isError
-
 
   useEffect(() => {
     if (post) {
@@ -48,20 +48,21 @@ function PostEditPage() {
           title,
         }).unwrap()
 
-        console.log('Пост відредаговано')
+        console.log('Post updated')
       } else {
         if (!title.trim()) return
+
         await addPost({
           title,
-          body: 'Приклад тіла поста',
+          body: 'Example post body',
           userId: 1,
         }).unwrap()
 
-        console.log('Пост додано')
+        console.log('Post added')
         setTitle('')
       }
-      navigate('/posts')
 
+      navigate('/posts')
     } catch (error) {
       console.error(error)
     }
@@ -72,40 +73,41 @@ function PostEditPage() {
       <div className={styles.card}>
         <div className={styles.header}>
           <h4 className={styles.title}>
-            {isEditMode ? 'Редагувати пост' : 'Додати новий пост'}
+            {isEditMode ? 'Edit Post' : 'Add New Post'}
           </h4>
         </div>
 
         <form onSubmit={handleSubmit} className={styles.form}>
-
           <div className={styles.field}>
-            <label className={styles.label}>Заголовок</label>
+            <label className={styles.label}>Title</label>
             <input
               className={styles.input}
               value={title}
               onChange={(e) => setTitle(e.target.value)}
-              placeholder="Заголовок нового поста"
+              placeholder="New post title"
               disabled={isLoading}
             />
           </div>
 
           <div className={styles.actions}>
-
             <button
               type="submit"
               className={`${styles.btn} ${styles.btnPrimary}`}
               disabled={isLoading}
             >
               {isLoading
-                ? (isEditMode ? 'Редагуємо...' : 'Додаємо...')
-                : (isEditMode ? 'Зберегти' : 'Додати')}
+                ? isEditMode
+                  ? 'Updating...'
+                  : 'Adding...'
+                : isEditMode
+                  ? 'Save'
+                  : 'Add'}
             </button>
           </div>
 
           {isError && (
-            <p className={styles.error}>Помилка</p>
+            <p className={styles.error}>Error</p>
           )}
-
         </form>
       </div>
     </div>
