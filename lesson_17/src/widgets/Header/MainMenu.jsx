@@ -4,8 +4,7 @@ import { Link } from 'react-router'
 import { getPagesObjectList } from '@/shared/config/routes/frontRoutes'
 export function MainMenu() {
 	const user = useSelector(selectAuthUser)
-	// Фільтруємо маршрути, які потрібно показати в меню (ті, що мають title)
-	// І враховуємо requireAuth і ролі
+
 	const allowedRoutes = getPagesObjectList().filter(({ meta }) => {
 		if (!meta.isInMenu) return false
 		if (!meta.requireAuth) return true

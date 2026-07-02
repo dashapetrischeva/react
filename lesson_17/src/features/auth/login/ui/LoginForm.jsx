@@ -2,16 +2,22 @@ import React, { useState } from 'react'
 import { useLogin } from '../model/useLogin'
 import { useNavigate } from 'react-router'
 import { frontRoutes } from '@/shared/config/routes/frontRoutes'
+
 export function LoginForm() {
 	const [email, setEmail] = useState('')
 	const [password, setPassword] = useState('')
 	const { login, isLoading, error } = useLogin()
 	const navigate = useNavigate()
+
 	const onSubmit = async (e) => {
 		e.preventDefault()
 		const result = await login({ email, password })
-		if (result.user) navigate(frontRoutes.pages.HomePage.navigationPath)
+
+		if (result.user) {
+			navigate(frontRoutes.pages.HomePage.navigationPath)
+		}
 	}
+
 	return (
 		<form onSubmit={onSubmit}>
 			<input
@@ -21,19 +27,22 @@ export function LoginForm() {
 				onChange={(e) => setEmail(e.target.value)}
 				required
 			/>
+
 			<input
 				type="password"
-				placeholder="Пароль"
+				placeholder="Password"
 				value={password}
 				onChange={(e) => setPassword(e.target.value)}
 				required
 			/>
+
 			<button type="submit" disabled={isLoading}>
-				Увійти
+				Sign In
 			</button>
+
 			{error && (
 				<div style={{ color: 'red' }}>
-					{error.data?.message || 'Помилка входу'}
+					{error.data?.message || 'Login failed'}
 				</div>
 			)}
 		</form>

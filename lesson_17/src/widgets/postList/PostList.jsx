@@ -17,22 +17,28 @@ export function PostList() {
 	const { data, isLoading, error } = useGetPostsQuery({ page, limit })
 	const [deletePost] = useDeletePostMutation()
 	const [editingPost, setEditingPost] = useState(null)
-	if (isLoading) return <div>Завантаження оголошень...</div>
-	if (error) return <div>Помилка: {error.toString()}</div>
+
+	if (isLoading) return <div>Loading posts...</div>
+	if (error) return <div>Error: {error.toString()}</div>
+
 	const posts = data.items || []
+
 	console.log('==posts')
 	console.log(data)
+
 	const totalPages = data?.totalPages || 1
+
 	const onEdit = (post) => {
 		setEditingPost(post)
 	}
+
 	const onDelete = async (id) => {
 		await deletePost(id)
 		if (posts.length === 1) setPage((p) => Math.max(p - 1, 1))
 	}
+
 	return (
 		<div>
-
 			{posts.map((post) => {
 				const canEdit =
 					user?.role === roles.admin ||
@@ -40,8 +46,11 @@ export function PostList() {
 
 				const actions = canEdit
 					? [
-						<EditPostButton key="edit" post={post} onEdit={onEdit} />,
-						<DeletePostButton key="delete" postId={post.id} onDelete={onDelete} />,
+						<DeletePostButton
+							key="delete"
+							postId={post.id}
+							onDelete={onDelete}
+						/>,
 					]
 					: []
 
@@ -53,29 +62,28 @@ export function PostList() {
 					/>
 				)
 			})}
+
 			<div style={{ marginTop: 10 }}>
 				<button
 					onClick={() => setPage((p) => Math.max(p - 1, 1))}
 					disabled={page === 1}
 				>
-					Назад
+					Previous
 				</button>
+
 				<span style={{ margin: '0 10px' }}>
-					Сторінка {page} з {totalPages}
+					Page {page} of {totalPages}
 				</span>
+
 				<button
 					onClick={() => setPage((p) => Math.min(p + 1, totalPages))}
 					disabled={page === totalPages}
 				>
-					Вперед
+					Next
 				</button>
 			</div>
-			{editingPost !== null && (
-				<PostEditModal
-					post={editingPost}
-					onClose={() => setEditingPost(null)}
-				/>
-			)}
+
+
 		</div>
 	)
 }

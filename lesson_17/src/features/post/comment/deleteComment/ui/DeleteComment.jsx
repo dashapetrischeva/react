@@ -13,15 +13,13 @@ function DeleteCommentButton({ comment }) {
 
 	if (!user) return null
 
-
-
 	if (!isAuthenticated) return null
 
 	return (
 		<button onClick={() => deleteComment(comment.id)} disabled={isDeleting}>
-			{isDeleting ? 'Видаляється…' : 'Видалити'}
+			{isDeleting ? 'Deleting…' : 'Delete'}
 		</button>
-	);
+	)
 }
 
-export default DeleteCommentButton;
+export default DeleteCommentButton

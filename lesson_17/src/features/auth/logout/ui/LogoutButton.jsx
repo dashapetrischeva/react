@@ -10,7 +10,7 @@ export function LogoutButton({ navigatePath = '/', style }) {
 	}
 	return (
 		<button onClick={handleLogout} style={{ marginLeft: 10, ...style }}>
-			Вийти
+			Logout
 		</button>
 	)
 }

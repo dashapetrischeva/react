@@ -8,7 +8,7 @@ export default function PostsPage() {
 	const user = useSelector(selectAuthUser)
 	return (
 		<div>
-			<h1>Оголошення</h1>
+			<h1>Posts</h1>
 			{user?.role === roles.manager || user?.role === roles.admin ? (
 				<AddPostButton />
 			) : null}
